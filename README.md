@@ -1,16 +1,34 @@
-# Zakir.Studio - Next.js Version
+# 🚀 Zakir.Studio - AI-разработка сайтов
 
-Современный лендинг на Next.js 15, React 19, TypeScript и Tailwind CSS.
+Современный сайт-портфолио студии AI-разработки с реферальной программой.
 
-## 🚀 Технологии
+## 📦 Технологии
 
-- **Next.js 15.1** (App Router)
-- **React 19**
-- **TypeScript 5.7**
-- **Tailwind CSS 3.4**
-- **Framer Motion 11** (для анимаций)
+- **Next.js 15** - React фреймворк
+- **TypeScript** - типизация
+- **Tailwind CSS** - стилизация
+- **Framer Motion** - анимации
 
-## 📦 Установка
+## 🌐 Живой сайт
+
+- **Основной:** https://zakir.tech
+- **Реферальная программа:** https://zakir.tech/referral
+
+## 📄 Документация
+
+### Для разработки:
+- `README.md` - этот файл
+- `MIGRATION_GUIDE.md` - гайд по миграции HTML → Next.js
+
+### Для бизнеса:
+- `PROMO_TEXTS.md` - готовые тексты для продвижения
+- `REFERRAL_INFO.md` - информация о партнёрской программе
+- `DEPLOYMENT_GUIDE.md` - полный гайд по деплою на VPS
+- `SEO_GUIDE.md` - руководство по SEO и индексации
+
+## 🚀 Быстрый старт
+
+### Разработка
 
 ```bash
 # Установка зависимостей
@@ -19,88 +37,169 @@ npm install
 # Запуск dev сервера
 npm run dev
 
-# Сборка для продакшена
+# Открыть: http://localhost:3000
+```
+
+### Сборка
+
+```bash
+# Продакшн сборка
 npm run build
 
-# Запуск продакшен сервера
-npm run start
+# Запуск продакшн версии
+npm start
 ```
-
-## 🌐 Деплой на Vercel
-
-1. Создайте репозиторий на GitHub
-2. Залейте код:
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/ваш-username/zakir-studio.git
-git push -u origin main
-```
-
-3. Зайдите на [vercel.com](https://vercel.com)
-4. Импортируйте репозиторий
-5. Vercel автоматически определит Next.js и задеплоит проект
 
 ## 📁 Структура проекта
 
 ```
 zakir-studio-nextjs/
 ├── app/
-│   ├── components/         # React компоненты
-│   │   ├── Navigation.tsx  # Навигация с бургер-меню
-│   │   ├── Hero.tsx        # Hero секция
-│   │   ├── Technology.tsx  # AI технологии
-│   │   └── Footer.tsx      # Футер
-│   ├── globals.css         # Глобальные стили
-│   ├── layout.tsx          # Root layout
-│   └── page.tsx            # Главная страница
-├── public/                 # Статические файлы
-├── next.config.ts          # Конфигурация Next.js
-├── tailwind.config.ts      # Конфигурация Tailwind
-├── tsconfig.json           # Конфигурация TypeScript
-└── package.json
+│   ├── components/          # React компоненты
+│   │   ├── Navigation.tsx   # Навигация
+│   │   ├── Hero.tsx         # Главный экран
+│   │   ├── Features.tsx     # Фичи
+│   │   ├── Portfolio.tsx    # Портфолио
+│   │   ├── Pricing.tsx      # Цены
+│   │   ├── Process.tsx      # Процесс работы
+│   │   ├── Contact.tsx      # Контакты
+│   │   └── Footer.tsx       # Футер
+│   ├── referral/            # Страница реферальной программы
+│   ├── privacy-policy/      # Политика конфиденциальности
+│   ├── offer/               # Публичная оферта
+│   ├── layout.tsx           # Общий лейаут
+│   ├── page.tsx             # Главная страница
+│   ├── globals.css          # Глобальные стили
+│   ├── sitemap.ts           # Карта сайта (SEO)
+│   └── robots.ts            # Robots.txt (SEO)
+├── public/                  # Статические файлы
+├── PROMO_TEXTS.md          # Тексты для продвижения
+├── REFERRAL_INFO.md        # Инфо о партнёрке
+├── DEPLOYMENT_GUIDE.md     # Гайд по деплою
+├── SEO_GUIDE.md            # Гайд по SEO
+└── package.json            # Зависимости
 ```
 
-## ✨ Особенности
+## 🎯 Особенности
 
-- ✅ Полностью типизировано на TypeScript
-- ✅ Адаптивный дизайн (мобильные + десктоп)
-- ✅ Бургер-меню для мобильных с Framer Motion
-- ✅ SEO-оптимизация (метаданные)
-- ✅ Плавные анимации
-- ✅ Google Fonts (Orbitron, Space Mono, Inter)
-- ✅ Современный App Router
-- ✅ Server Components где возможно
-- ✅ Client Components только где нужна интерактивность
+### Технические
+- ✅ Server Components (по умолчанию)
+- ✅ Оптимизированные шрифты (Google Fonts)
+- ✅ SEO оптимизация (metadata, sitemap, robots)
+- ✅ Адаптивный дизайн
+- ✅ Плавные анимации (Framer Motion)
+- ✅ TypeScript strict mode
 
-## 🎨 Кастомизация
+### Бизнес
+- 💰 Реферальная программа (30% с заказа)
+- 📱 Интеграция с Telegram (@zakir4)
+- 💳 Фиксированная цена: 12,000₽
+- 🚀 Быстрая разработка: 1-3 часа
 
-### Цвета
-Редактируйте `tailwind.config.ts` для изменения цветовой схемы.
+## 💰 Реферальная программа
 
-### Шрифты
-Шрифты настроены в `app/layout.tsx` через next/font/google.
+Получайте **30% (3,600₽)** с каждого заказа от приведённых клиентов!
 
-### Анимации
-Анимации настроены в:
-- `tailwind.config.ts` (keyframes)
-- `app/globals.css` (CSS анимации)
-- Компоненты используют Framer Motion
+**Как работает:**
+1. Приводите клиентов (используйте тексты из `PROMO_TEXTS.md`)
+2. Клиент упоминает вас при заказе
+3. Получаете 30% после оплаты
 
-## 📝 TODO
+**Подробности:**
+- Страница: https://zakir.tech/referral
+- Документация: `REFERRAL_INFO.md`
 
-- [ ] Добавить секцию Pricing
-- [ ] Добавить секцию Process
-- [ ] Добавить секцию Contact
-- [ ] Создать страницы Privacy Policy и Offer
-- [ ] Добавить Google Analytics
+## 📱 Контакты
 
-## 🔧 Требования
+- **Telegram:** [@zakir4](https://t.me/zakir4)
+- **Сайт:** [zakir.tech](https://zakir.tech)
 
-- Node.js 18.17 или новее
-- npm или yarn
+## 📊 Цены
 
-## 📄 Лицензия
+**Стандартный пакет: 12,000₽**
 
-Private project for Zakir.Studio
+Включает:
+- Разработка сайта (Next.js)
+- Современный дизайн
+- Хостинг на год
+- SSL сертификат
+- Техподдержка
+
+## 🛠️ Деплой
+
+### На VPS (рекомендуется)
+
+Полный гайд: `DEPLOYMENT_GUIDE.md`
+
+**Краткая инструкция:**
+
+```bash
+# На сервере
+cd /var/www
+git clone https://github.com/username/zakir-studio.git
+cd zakir-studio
+
+npm install
+npm run build
+
+pm2 start npm --name "zakir-studio" -- start
+pm2 save
+pm2 startup
+```
+
+### На Vercel
+
+```bash
+# Установить Vercel CLI
+npm i -g vercel
+
+# Деплой
+vercel
+```
+
+## 🔍 SEO
+
+### Sitemap
+- Автогенерация: `app/sitemap.ts`
+- URL: https://zakir.tech/sitemap.xml
+
+### Robots.txt
+- Автогенерация: `app/robots.ts`
+- URL: https://zakir.tech/robots.txt
+
+### Индексация
+Полный гайд: `SEO_GUIDE.md`
+
+**Основные шаги:**
+1. Регистрация в Яндекс.Вебмастер
+2. Регистрация в Google Search Console
+3. Отправка sitemap
+4. Запрос индексации
+
+## 📈 Статистика
+
+- **Скорость:** ~0.3s загрузка
+- **Размер:** ~154KB First Load JS
+- **Производительность:** 95+ на PageSpeed
+- **SEO:** Оптимизирован (metadata, sitemap, robots)
+
+## 🔐 Безопасность
+
+- ✅ HTTPS (Let's Encrypt)
+- ✅ Security headers
+- ✅ Нет уязвимостей npm
+- ✅ TypeScript strict mode
+
+## 📝 Лицензия
+
+© 2026 Zakir.Studio. Все права защищены.
+
+## 🤝 Поддержка
+
+Вопросы и предложения:
+- Telegram: [@zakir4](https://t.me/zakir4)
+- Email: через форму на сайте
+
+---
+
+**Сделано с ❤️ с использованием AI-технологий**

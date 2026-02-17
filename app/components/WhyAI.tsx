@@ -71,7 +71,7 @@ export default function WhyAI() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-orbitron font-black gradient-text mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-orbitron font-black gradient-text mb-4 px-4">
             Почему именно AI?
           </h2>
         </motion.div>
@@ -80,18 +80,16 @@ export default function WhyAI() {
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
-              className="bg-slate-800 bg-opacity-50 backdrop-blur-lg rounded-2xl p-8 border border-slate-700 card-hover"
+              className="bg-slate-800 bg-opacity-50 backdrop-blur-lg rounded-2xl p-8 border border-slate-700 card-hover overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ 
-                scale: 1.03,
-                rotateY: 3,
-                rotateX: 3,
-                transition: { type: "spring", stiffness: 300 }
+                scale: 1.02,
+                y: -5,
+                transition: { type: "spring", stiffness: 300, damping: 20 }
               }}
-              style={{ transformStyle: "preserve-3d" }}
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">

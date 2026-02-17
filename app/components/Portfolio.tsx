@@ -1,30 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
 
 const portfolioItems = [
   {
-    title: "Лендинг для фитнес-тренера",
+    title: "YOL Academy - Образовательная платформа",
     category: "Лендинг",
-    description: "Яркий одностраничник с формой записи на тренировки",
-    image: "/images/portfolio-example-1.svg",
-    tags: ["Next.js", "Tailwind", "Framer Motion"],
+    description: "Современный лендинг для академии YOL с адаптивным дизайном",
+    url: "https://yol-academy.vercel.app/",
+    tags: ["Next.js", "Tailwind", "Vercel"],
+    image: "/portfolio/yol-academy.png",
   },
   {
-    title: "Сайт-визитка для дизайнера",
+    title: "Zakir.Studio - Этот сайт",
     category: "Визитка",
-    description: "Минималистичное портфолио с галереей работ",
-    image: "/images/portfolio-example-1.svg",
-    tags: ["React", "TypeScript", "Animations"],
-  },
-  {
-    title: "Лендинг для стартапа",
-    category: "Лендинг",
-    description: "Современный SaaS лендинг с pricing таблицами",
-    image: "/images/portfolio-example-1.svg",
-    tags: ["Next.js", "AI Content", "SEO"],
+    description: "Сайт-портфолио студии AI-разработки с анимациями",
+    url: "https://zakir.tech",
+    tags: ["Next.js", "TypeScript", "Framer Motion"],
+    image: "/portfolio/zakir-studio.png",
   },
 ];
 
@@ -89,48 +84,71 @@ export default function Portfolio() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="group cursor-pointer"
+              className="group"
             >
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all">
-                {/* Image */}
-                <div className="relative aspect-video overflow-hidden bg-slate-900">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60" />
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="px-3 py-1 bg-cyan-900 bg-opacity-50 rounded-full text-cyan-300 text-sm font-semibold border border-cyan-700">
-                      {item.category}
-                    </span>
+              <a 
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all flex flex-col h-full min-h-[480px]">
+                  {/* Preview Area */}
+                  <div className="relative aspect-video overflow-hidden bg-slate-900">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <svg 
+                            className="w-8 h-8 text-white" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </div>
+                        <p className="text-white text-sm font-semibold">Посмотреть проект →</p>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-orbitron font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-slate-400 text-sm mb-4">
-                    {item.description}
-                  </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {item.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded"
-                      >
-                        {tag}
+                  {/* Content */}
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-3 py-1 bg-cyan-900 bg-opacity-50 rounded-full text-cyan-300 text-sm font-semibold border border-cyan-700">
+                        {item.category}
                       </span>
-                    ))}
+                    </div>
+                    <h3 className="text-xl font-orbitron font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-400 text-sm mb-4 flex-1">
+                      {item.description}
+                    </p>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {item.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </motion.div>
           ))}
         </div>
@@ -147,7 +165,9 @@ export default function Portfolio() {
             Хотите такой же сайт для своего бизнеса?
           </p>
           <a
-            href="#contact"
+            href="https://t.me/zakir4"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-2xl hover:scale-105 transition-transform"
           >
             Заказать свой сайт

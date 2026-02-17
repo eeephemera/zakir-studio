@@ -82,10 +82,10 @@ export default function Offer() {
               <p className="mb-2">
                 <strong>Telegram:</strong>{" "}
                 <Link
-                  href="https://t.me/eeephemera"
+                  href="https://t.me/zakir4"
                   className="text-cyan-400 hover:text-cyan-300"
                 >
-                  @eeephemera
+                  @zakir4
                 </Link>
               </p>
             </section>

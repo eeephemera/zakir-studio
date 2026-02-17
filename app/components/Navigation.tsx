@@ -39,7 +39,13 @@ export default function Navigation() {
                 Цены
               </Link>
               <Link
-                href="https://t.me/eeephemera"
+                href="/referral"
+                className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
+              >
+                💰 Партнёрка
+              </Link>
+              <Link
+                href="https://t.me/zakir4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-white px-6 py-2 rounded-lg font-semibold"
@@ -108,7 +114,14 @@ export default function Navigation() {
                   Цены
                 </Link>
                 <Link
-                  href="https://t.me/eeephemera"
+                  href="/referral"
+                  onClick={closeMenu}
+                  className="block px-3 py-2 text-cyan-400 hover:text-cyan-300 hover:bg-slate-800 rounded-lg transition-colors font-semibold"
+                >
+                  💰 Партнёрская программа
+                </Link>
+                <Link
+                  href="https://t.me/zakir4"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMenu}

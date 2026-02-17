@@ -70,17 +70,16 @@ export default function Features() {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 border border-slate-700"
+              className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 border border-slate-700 overflow-hidden flex flex-col min-h-[520px]"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{
-                scale: 1.03,
-                rotateY: 3,
-                transition: { type: "spring", stiffness: 300 },
+                scale: 1.02,
+                y: -5,
+                transition: { type: "spring", stiffness: 300, damping: 20 },
               }}
-              style={{ transformStyle: "preserve-3d" }}
             >
               {/* Icon */}
               <div
@@ -104,10 +103,10 @@ export default function Features() {
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl md:text-3xl font-orbitron font-bold text-white mb-4">
+              <h3 className="text-2xl max-[900px]:text-xl font-orbitron font-bold text-white mb-4">
                 {feature.title}
               </h3>
-              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+              <p className="text-slate-300 text-lg leading-relaxed mb-6 flex-1">
                 {feature.description}
               </p>
 

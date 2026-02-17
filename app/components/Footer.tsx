@@ -44,6 +44,14 @@ export default function Footer() {
                   Контакты
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/referral"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
+                >
+                  💰 Партнёрская программа
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -52,7 +60,16 @@ export default function Footer() {
               Контакты
             </h4>
             <ul className="space-y-2 text-slate-400">
-              <li>Telegram: @eeephemera</li>
+              <li>
+                <a 
+                  href="https://t.me/zakir4" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-cyan-400 transition-colors"
+                >
+                  Telegram: @zakir4
+                </a>
+              </li>
               <li>Работаем: Пн-Вс 10:00-22:00</li>
               <li>Ответ в течение 15 минут</li>
             </ul>

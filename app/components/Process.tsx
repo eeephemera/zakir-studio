@@ -27,7 +27,7 @@ const steps = [
   {
     number: 4,
     title: "Запуск",
-    description: "Получаете готовый сайт и деплоим его онлайн",
+    description: "Публикуем ваш сайт в интернет",
     color: "from-purple-600 to-violet-600",
     border: "border-purple-800",
   },
@@ -63,16 +63,18 @@ export default function Process() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div
-                className={`bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border ${step.border} text-center card-hover min-h-[180px] flex flex-col justify-center`}
+                className={`bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border ${step.border} text-center card-hover min-h-[280px] flex flex-col justify-between`}
               >
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-orbitron font-bold`}
-                >
-                  {step.number}
+                <div className="flex-1 flex flex-col justify-center">
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-orbitron font-bold`}
+                  >
+                    {step.number}
+                  </div>
+                  <h3 className="text-xl font-orbitron font-bold text-white mb-3">
+                    {step.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-orbitron font-bold text-white mb-3">
-                  {step.title}
-                </h3>
                 <p className="text-slate-400 text-sm">{step.description}</p>
               </div>
               {/* Arrow between steps */}

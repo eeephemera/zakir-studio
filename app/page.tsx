@@ -20,7 +20,7 @@ export default function Home() {
         <Technology />
         <Features />
         <WhyAI />
-        {/* <Portfolio /> - Временно скрыто */}
+        <Portfolio />
         <Pricing />
         <Process />
         <Contact />
