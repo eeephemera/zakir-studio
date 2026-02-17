@@ -21,9 +21,18 @@ const portfolioItems = [
     tags: ["Next.js", "TypeScript", "Framer Motion"],
     image: "/portfolio/zakir-studio.png",
   },
+  {
+    title: "Bar Play — Интерактивная игра для заведений",
+    category: "Продуктовый сайт",
+    description:
+      "Промо-сайт интерактивной web-аркады для баров и кафе: демонстрация геймплея, преимущества для владельцев (вовлечённость гостей, увеличение среднего чека) и форма для подключения партнёров.",
+    url: "https://bar-game-blond.vercel.app/#",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    image: "/portfolio/bar-play.png",
+  },
 ];
 
-const categories = ["Все", "Лендинг", "Визитка"];
+const categories = ["Все", "Лендинг", "Визитка", "Продуктовый сайт"];
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("Все");
@@ -68,6 +77,7 @@ export default function Portfolio() {
                   ? "bg-gradient-to-r from-cyan-600 to-purple-600 text-white"
                   : "bg-slate-800 text-slate-300 hover:bg-slate-700"
               }`}
+              aria-pressed={activeCategory === category}
             >
               {category}
             </button>
@@ -86,11 +96,12 @@ export default function Portfolio() {
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className="group"
             >
-              <a 
+              <a
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block h-full"
+                aria-label={`Открыть проект: ${item.title}`}
               >
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all flex flex-col h-full min-h-[480px]">
                   {/* Preview Area */}
@@ -107,16 +118,23 @@ export default function Portfolio() {
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                          <svg 
-                            className="w-8 h-8 text-white" 
-                            fill="none" 
-                            stroke="currentColor" 
+                          <svg
+                            className="w-8 h-8 text-white"
+                            fill="none"
+                            stroke="currentColor"
                             viewBox="0 0 24 24"
                           >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                            />
                           </svg>
                         </div>
-                        <p className="text-white text-sm font-semibold">Посмотреть проект →</p>
+                        <p className="text-white text-sm font-semibold">
+                          Посмотреть проект →
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -137,9 +155,9 @@ export default function Portfolio() {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2">
-                      {item.tags.map((tag) => (
+                      {item.tags.map((tag, tIndex) => (
                         <span
-                          key={tag}
+                          key={`${tag}-${tIndex}`}
                           className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded"
                         >
                           {tag}
@@ -161,9 +179,7 @@ export default function Portfolio() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <p className="text-slate-400 mb-4">
-            Хотите такой же сайт для своего бизнеса?
-          </p>
+          <p className="text-slate-400 mb-4">Хотите такой же сайт для своего бизнеса?</p>
           <a
             href="https://t.me/zakir4"
             target="_blank"

@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
               <p className="mb-4">
                 Настоящая Политика конфиденциальности (далее — «Политика»)
                 определяет порядок обработки и защиты персональных данных
-                пользователей сайта zakir-studio.vercel.app (далее — «Сайт»),
+                пользователей сайта zakir.tech (далее — «Сайт»),
                 предоставляющего услуги по разработке веб-сайтов.
               </p>
               <p>
@@ -100,7 +100,7 @@ export default function PrivacyPolicy() {
 
             <section>
               <h2 className="text-2xl font-orbitron font-bold text-white mb-4">
-                10. Контактная информация
+                4. Контактная информация
               </h2>
               <p className="mb-2">
                 <strong>Оператор:</strong> Zakir.Studio
@@ -111,7 +111,7 @@ export default function PrivacyPolicy() {
                   href="https://t.me/zakir4"
                   className="text-cyan-400 hover:text-cyan-300"
                 >
-                  @zakir4
+                  @Zakir4
                 </Link>
               </p>
               <p>

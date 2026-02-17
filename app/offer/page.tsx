@@ -57,7 +57,7 @@ export default function Offer() {
 
             <section>
               <h2 className="text-2xl font-orbitron font-bold text-white mb-4">
-                3. Стоимость услуг
+                2. Стоимость услуг
               </h2>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
                 <li>
@@ -74,7 +74,7 @@ export default function Offer() {
 
             <section>
               <h2 className="text-2xl font-orbitron font-bold text-white mb-4">
-                13. Реквизиты и контакты
+                3. Реквизиты и контакты
               </h2>
               <p className="mb-2">
                 <strong>Исполнитель:</strong> Zakir.Studio
@@ -82,10 +82,10 @@ export default function Offer() {
               <p className="mb-2">
                 <strong>Telegram:</strong>{" "}
                 <Link
-                  href="https://t.me/zakir4"
+                  href="https://t.me/Zakir4"
                   className="text-cyan-400 hover:text-cyan-300"
                 >
-                  @zakir4
+                  @Zakir4
                 </Link>
               </p>
             </section>
